@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="geriGit"
+    tools:context=".IkinciAktivite">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="188dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="41dp"
+        android:text="İkinciAktivite"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/S_activity_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="259dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:onClick="geriGit"
+        android:text="GERİ GİT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/S_activity_text"
+        app:layout_constraintTop_toBottomOf="@+id/S_activity_text" />
+
+    <TextView
+        android:id="@+id/S_activity_text"
+        android:layout_width="183dp"
+        android:layout_height="0dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="69dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
