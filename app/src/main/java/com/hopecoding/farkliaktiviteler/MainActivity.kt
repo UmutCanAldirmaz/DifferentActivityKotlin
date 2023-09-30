@@ -3,32 +3,59 @@ package com.hopecoding.farkliaktiviteler
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.hopecoding.farkliaktiviteler.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
+        val intentFromSecond = intent
+
+        if (intentFromSecond.getBooleanExtra("isBack", false)) {
+            binding.textView.setText(getString(R.string.return_info))
+        }
+
+        println("onCreate is executed")
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        println("onStart is executed")
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        println("onResume is executed")
+
+    }
+
+    override fun onStop() {
+        super.onStop()
+        println("onStop is executed")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        println("onDestroy is executed")
 
     }
 
 
 
-    fun AktiviteDegistir(view:View){
-
-        val veri=editText.text.toString()
-        if(veri.equals("")){
-            Toast.makeText(this, "You forgot enter data", Toast.LENGTH_SHORT).show()
-        }else{
-            val intent=Intent(applicationContext,IkinciAktivite::class.java)
-            intent.putExtra("gidenveri",veri)
-            startActivity(intent)
-            finish()
-        }
-
-
+    fun nextScreen(view: View) {
+        val intent = Intent(this@MainActivity, SecondActivity::class.java)
+        intent.putExtra("data", binding.dataTxt.text.toString())
+        startActivity(intent)
+        finish()
     }
 }

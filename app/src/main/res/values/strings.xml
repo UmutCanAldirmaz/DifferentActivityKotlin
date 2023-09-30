@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">FarkliAktiviteler</string>
+    <string name="app_name">DifferentActivity</string>
+    <string name="First_Screen">First Activity Screen</string>
+    <string name="Second_Screen">Second Activity Screen</string>
+    <string name="Second_Screen_Data">Incoming Data:</string>
+    <string name="Back_Btn_Txt">Return to Screen </string>
+    <string name="First_Screen_Data">Enter Data:</string>
+    <string name="Go_Btn_Txt">Go to Screen</string>
+    <string name="return_info">Returned from the second screen.</string>
 </resources>
